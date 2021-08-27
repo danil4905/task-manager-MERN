@@ -1,0 +1,609 @@
+{
+  "contents": [
+    {
+      "id": 0,
+      "type": {
+        "id": 0,
+        "name": "video"
+      },
+      "name": "Название повседневная практика показывает",
+      "dateCreated": "09:21 14.02.2020",
+      "author": {
+        "id": 0,
+        "name": "Аркадий Юрченко"
+      },
+      "format": "jpg",
+      "url": "http://localhost:3002/static/test.png",
+      "preview": "02:31"
+    },
+    {
+      "id": 1,
+      "type": {
+        "id": 1,
+        "name": "photo"
+      },
+      "name": "Название равным образом начало повседневной работы",
+      "dateCreated": "15:41 14.02.2020",
+      "author": {
+<<<<<<< HEAD
+        "id": 1,
+        "name": "Оскар Калинин"
+      },
+      "format": "jpg",
+      "url": "http://localhost:3002/static/taskBg4.png",
+      "preview": ""
+    },
+    {
+      "id": 2,
+      "type": {
+        "id": 2,
+        "name": "audio"
+      },
+      "name": "Название с другой стороны начало повседневной работы по формированию позиции",
+      "dateCreated": "20:18 13.02.2020",
+      "author": {
+        "id": 2,
+        "name": "Валерий Яковлев"
+      },
+      "format": "jpg",
+      "url": "http://localhost:3002/static/bg.png",
+      "preview": "02:31"
+    },
+    {
+      "id": 3,
+      "type": {
+        "id": 3,
+        "name": "photo"
+      },
+      "name": "Название равным образом начало повседневной работы",
+      "dateCreated": "10:41 12.02.2020",
+      "author": {
+        "id": 3,
+        "name": "София Лебедевa"
+      },
+      "format": "jpg",
+      "url": "http://localhost:3002/static/taskBg3.png",
+      "preview": ""
+    },
+    {
+      "id": 4,
+      "type": {
+        "id": 4,
+        "name": "video"
+      },
+      "name": "Название повседневная практика показывает",
+      "dateCreated": "14:56 11.02.2020",
+      "author": {
+        "id": 4,
+        "name": "Альбина Ткаченко"
+      },
+      "format": "jpg",
+      "url": "http://localhost:3002/static/taskBg2.png",
+      "preview": "02:31"
+    },
+    {
+      "id": 5,
+      "type": {
+        "id": 5,
+        "name": "photo"
+      },
+      "name": "Название равным образом начало повседневной работы",
+      "dateCreated": "08:47 11.02.2020",
+      "author": {
+        "id": 5,
+        "name": "Данил Плотников"
+      },
+      "format": "jpg",
+      "url": "http://localhost:3002/static/taskBg1.png",
+      "preview": ""
+    },
+    {
+      "id": 6,
+      "type": {
+        "id": 6,
+        "name": "audio"
+      },
+      "name": "Название с другой стороны начало повседневной работы по формированию позиции",
+      "dateCreated": "20:18 13.02.2020",
+      "author": {
+        "id": 2,
+        "name": "Валерий Яковлев"
+      },
+      "format": "jpg",
+      "url": "http://localhost:3002/static/bg.png",
+      "preview": "02:31"
+    },
+    {
+      "id": 7,
+      "type": {
+        "id": 7,
+        "name": "photo"
+      },
+      "name": "Название равным образом начало повседневной работы",
+      "dateCreated": "15:41 14.02.2020",
+      "author": {
+        "id": 1,
+        "name": "Оскар Калинин"
+      },
+      "format": "jpg",
+      "url": "http://localhost:3002/static/taskBg4.png",
+      "preview": ""
+    },
+    {
+      "id": 0,
+      "type": {
+        "id": 0,
+        "name": "video"
+      },
+      "name": "Название повседневная практика показывает",
+      "dateCreated": "09:21 14.02.2020",
+      "author": {
+        "id": 0,
+        "name": "Аркадий Юрченко"
+      },
+      "format": "jpg",
+      "url": "http://localhost:3002/static/test.png",
+      "preview": "02:31"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 0,
+      "type": "newTask",
+      "date": "09:51 14.02.2020",
+      "message": "",
+      "user": {
+        "id": 0,
+        "name": "Аркадий Юрченко"
+      },
+      "task": {
+        "id": 0,
+        "name": "Название задачи"
+      }
+    },
+    {
+      "id": 1,
+      "type": "comment",
+      "date": "08:51 14.02.2020",
+      "message": "",
+      "user": {
+        "id": 1,
+        "name": ""
+      },
+      "task": {
+        "id": 1,
+        "name": "Новая Задача"
+      }
+    },
+    {
+      "id": 2,
+      "type": "video",
+      "date": "15:17 13.02.2020",
+      "message": "",
+      "user": {
+        "id": 2,
+        "name": "Семён Щеглов"
+      },
+      "task": {
+        "id": 2,
+        "name": "Новая Задача"
+      }
+    },
+    {
+      "id": 3,
+      "type": "audio",
+      "date": "11:51 13.02.2020",
+      "message": "",
+      "user": {
+        "id": 3,
+        "name": "Семён Щеглов"
+      },
+      "task": {
+        "id": 3,
+        "name": "Новая Задача"
+      }
+    },
+    {
+      "id": 4,
+      "type": "photo",
+      "date": "11:51 13.02.2020",
+      "message": "",
+      "user": {
+        "id": 4,
+        "name": "Семён Щеглов"
+      },
+      "task": {
+        "id": 4,
+        "name": "Новая Задача"
+      }
+    },
+    {
+      "id": 5,
+      "type": "comment",
+      "date": "08:51 14.02.2020",
+      "message": "",
+      "user": {
+        "id": 5,
+=======
+        "id": 1,
+        "name": "Оскар Калинин"
+      },
+      "format": "jpg",
+      "url": "http://localhost:3002/static/taskBg4.png",
+      "preview": ""
+    },
+    {
+      "id": 2,
+      "type": {
+        "id": 2,
+        "name": "audio"
+      },
+      "name": "Название с другой стороны начало повседневной работы по формированию позиции",
+      "dateCreated": "20:18 13.02.2020",
+      "author": {
+        "id": 2,
+        "name": "Валерий Яковлев"
+      },
+      "format": "jpg",
+      "url": "http://localhost:3002/static/bg.png",
+      "preview": "02:31"
+    },
+    {
+      "id": 3,
+      "type": {
+        "id": 3,
+        "name": "photo"
+      },
+      "name": "Название равным образом начало повседневной работы",
+      "dateCreated": "10:41 12.02.2020",
+      "author": {
+        "id": 3,
+        "name": "София Лебедевa"
+      },
+      "format": "jpg",
+      "url": "http://localhost:3002/static/taskBg3.png",
+      "preview": ""
+    },
+    {
+      "id": 4,
+      "type": {
+        "id": 4,
+        "name": "video"
+      },
+      "name": "Название повседневная практика показывает",
+      "dateCreated": "14:56 11.02.2020",
+      "author": {
+        "id": 4,
+        "name": "Альбина Ткаченко"
+      },
+      "format": "jpg",
+      "url": "http://localhost:3002/static/taskBg2.png",
+      "preview": "02:31"
+    },
+    {
+      "id": 5,
+      "type": {
+        "id": 5,
+        "name": "photo"
+      },
+      "name": "Название равным образом начало повседневной работы",
+      "dateCreated": "08:47 11.02.2020",
+      "author": {
+        "id": 5,
+        "name": "Данил Плотников"
+      },
+      "format": "jpg",
+      "url": "http://localhost:3002/static/taskBg1.png",
+      "preview": ""
+    },
+    {
+      "id": 6,
+      "type": {
+        "id": 6,
+        "name": "audio"
+      },
+      "name": "Название с другой стороны начало повседневной работы по формированию позиции",
+      "dateCreated": "20:18 13.02.2020",
+      "author": {
+        "id": 2,
+        "name": "Валерий Яковлев"
+      },
+      "format": "jpg",
+      "url": "http://localhost:3002/static/bg.png",
+      "preview": "02:31"
+    },
+    {
+      "id": 7,
+      "type": {
+        "id": 7,
+        "name": "photo"
+      },
+      "name": "Название равным образом начало повседневной работы",
+      "dateCreated": "15:41 14.02.2020",
+      "author": {
+        "id": 1,
+        "name": "Оскар Калинин"
+      },
+      "format": "jpg",
+      "url": "http://localhost:3002/static/taskBg4.png",
+      "preview": ""
+    },
+    {
+      "id": 0,
+      "type": {
+        "id": 0,
+        "name": "video"
+      },
+      "name": "Название повседневная практика показывает",
+      "dateCreated": "09:21 14.02.2020",
+      "author": {
+        "id": 0,
+        "name": "Аркадий Юрченко"
+      },
+      "format": "jpg",
+      "url": "http://localhost:3002/static/test.png",
+      "preview": "02:31"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 0,
+      "type": "newTask",
+      "date": "09:51 14.02.2020",
+      "message": "",
+      "user": {
+        "id": 0,
+        "name": "Аркадий Юрченко"
+      },
+      "task": {
+        "id": 0,
+        "name": "Название задачи"
+      }
+    },
+    {
+      "id": 1,
+      "type": "comment",
+      "date": "08:51 14.02.2020",
+      "message": "",
+      "user": {
+        "id": 1,
+        "name": ""
+      },
+      "task": {
+        "id": 1,
+        "name": "Новая Задача"
+      }
+    },
+    {
+      "id": 2,
+      "type": "video",
+      "date": "15:17 13.02.2020",
+      "message": "",
+      "user": {
+        "id": 2,
+        "name": "Семён Щеглов"
+      },
+      "task": {
+        "id": 2,
+        "name": "Новая Задача"
+      }
+    },
+    {
+      "id": 3,
+      "type": "audio",
+      "date": "11:51 13.02.2020",
+      "message": "",
+      "user": {
+        "id": 3,
+        "name": "Семён Щеглов"
+      },
+      "task": {
+        "id": 3,
+        "name": "Новая Задача"
+      }
+    },
+    {
+      "id": 4,
+      "type": "photo",
+      "date": "11:51 13.02.2020",
+      "message": "",
+      "user": {
+        "id": 4,
+        "name": "Семён Щеглов"
+      },
+      "task": {
+        "id": 4,
+        "name": "Новая Задача"
+      }
+    },
+    {
+      "id": 5,
+      "type": "comment",
+      "date": "08:51 14.02.2020",
+      "message": "",
+      "user": {
+        "id": 5,
+>>>>>>> ce69e510d63e56c5c55681c79a443789b0ef8dcf
+        "name": ""
+      },
+      "task": {
+        "id": 5,
+        "name": "Новая Задача"
+      }
+    },
+    {
+      "id": 6,
+      "type": "newTask",
+      "date": "09:51 14.02.2020",
+      "message": "",
+      "user": {
+        "id": 6,
+        "name": "Аркадий Юрченко"
+      },
+      "task": {
+        "id": 6,
+        "name": "Название задачи"
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": 0,
+      "name": "Название повседневная практика показывает",
+      "type": {
+        "id": 0,
+        "name": "Видео"
+      },
+      "executor": {
+        "id": 0,
+        "name": "Аркадий Юрченко"
+      },
+      "dateExpired": "10.02.2020",
+      "status": {
+        "id": 0,
+        "name": "В работе"
+      }
+    },
+    {
+      "id": 1,
+      "name": "Название равным образом начало повседневной работы",
+      "type": {
+        "id": 0,
+        "name": "Фото"
+      },
+      "executor": {
+        "id": 0,
+        "name": "Эльза Калининa"
+      },
+      "dateExpired": "09.02.2020",
+      "status": {
+        "id": 0,
+        "name": "Выполнено"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Название с другой стороны начало повседневной работы по формиро",
+      "type": {
+        "id": 0,
+        "name": "Аудио"
+      },
+      "executor": {
+        "id": 0,
+        "name": "Дмитрий Румянцев"
+      },
+      "dateExpired": "08.02.2020",
+      "status": {
+        "id": 0,
+        "name": "Ожидает согласования"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Название равным образом начало повседневной работы",
+      "type": {
+        "id": 0,
+        "name": "Фото"
+      },
+      "executor": {
+        "id": 0,
+        "name": "Гена Черемнов"
+      },
+      "dateExpired": "06.02.2020",
+      "status": {
+        "id": 0,
+        "name": "Ожидает согласования"
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": 0,
+      "name": "Инесса Соловьёвa",
+      "email": "inessa90@gmail.com",
+      "avatar": "http://localhost:3002/static/avatar_1.jpg",
+      "role": {
+        "id": 0,
+        "name": "content-maker"
+      }
+    },
+    {
+      "id": 1,
+      "name": "Оскар Калинин",
+      "email": "oscar@gmail.com",
+      "avatar": "http://localhost:3002/static/avatar_2.jpg",
+      "role": {
+        "id": 0,
+        "name": "content-maker"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Альбина Ткаченко",
+      "email": "albina_t@gmail.com",
+      "avatar": "http://localhost:3002/static/avatar_3.jpg",
+      "role": {
+        "id": 1,
+        "name": "manager"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Адам Галкин",
+      "email": "galkin@gmail.com",
+      "avatar": "http://localhost:3002/static/avatar_4.jpg",
+      "role": {
+        "id": 2,
+        "name": "admin"
+      }
+    },
+    {
+      "id": 4,
+      "name": "София Мельник",
+      "email": "melnik_s@gmail.com",
+      "avatar": "http://localhost:3002/static/avatar_5.jpg",
+      "role": {
+        "id": 1,
+        "name": "manager"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Инесса Соловьёвa",
+      "email": "inessa90@gmail.com",
+      "avatar": "http://localhost:3002/static/avatar_1.jpg",
+      "role": {
+        "id": 0,
+        "name": "content-maker"
+      }
+    },
+    {
+      "email": "conovalov.danil3441@gmail.com",
+<<<<<<< HEAD
+      "password": "$2a$10$xACKtvin9.bq9MQzNB3omukG5t/DxO2v5P8my65hIk1l51jHjcSJ2",
+      "name": "Коновалов Данил",
+      "avatar": "",
+      "role": {
+        "name": "manager"
+=======
+      "password": "$2a$10$/0rs72zkM70aG3ZYb0ECVeLu9xHoEuuZb6iYEwxL8KVprqkCs9jD6",
+      "role": {
+        "name": "admin"
+      },
+      "avatar": "lol",
+      "name": "Коновалов Данил",
+      "id": 6
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "$2a$10$9ZH1mlTPuBYuzzbFtxvTIeskjRFNoAy1.jJje2JTVsOzNwRF/iO4u",
+      "name": "test",
+      "avatar": "",
+      "role": {
+        "name": "admin"
+>>>>>>> ce69e510d63e56c5c55681c79a443789b0ef8dcf
+      },
+      "id": 7
+    }
+  ]
+}

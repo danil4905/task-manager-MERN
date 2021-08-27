@@ -1,0 +1,23 @@
+@import '/src/variables.scss';
+
+.wrap {
+    width: 100%;
+    background-color: white;
+    padding: 18px 20px;
+    display:grid;
+    grid-template-columns: 74px 502px 185px 136px 181px 102px;
+    align-items: center;
+    font-size: $regular-size;
+    border: 1px solid #D8E3EC;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+}
+.controls {
+    display:flex;
+}
+.typeImg,.dateIcon {
+    margin-right: 5px;
+}
+.title {
+    font-weight: 500;
+}

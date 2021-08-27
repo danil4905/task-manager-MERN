@@ -1,0 +1,73 @@
+@import '/src/variables.scss';
+
+.wrapper {
+    margin-top: 40px;
+}
+.backWrapper {
+    color: $color-blue;
+    margin-bottom: 30px;
+}
+.form {
+    display:flex;
+    justify-content: space-between;
+}
+.leftSide,.rightSide {
+    background-color: white;
+    border: 1px solid #D8E3EC;
+    border-radius: 4px;
+    padding: 30px;
+}
+.label {
+    font-weight: 500;
+    font-size: $small-size;
+}
+.leftSide {
+    width: 808px;
+    min-height: 482px;
+}
+.rightSide {
+    width: 394px;
+    height: 312px;
+}
+.input,.textarea {
+    width: 100%;
+    margin: 10px 0 30px 0;
+}
+.textarea {
+    height: 110px;
+    font-size: $regular-size;
+    font-family: $font-main;
+    resize:none;
+    padding-top: 15px;
+}
+.inputRight {
+    margin: 10px 0 20px 0;
+}
+.fileWrap {
+    background-color: $color-ltblue;
+    width: 172px;
+    height: 40px;
+    border-radius: 4px;
+    color:$color-blue;
+    font-weight: 500;
+    font-size: $regular-size;
+    display:flex;
+    align-items: center;
+    padding-left:5px ;
+}
+.labelFile {
+    display: block;
+    position: relative;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.fileInput {
+    opacity: 0;
+    bottom: 0px;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    height: 40px;
+    width: 140px;
+}

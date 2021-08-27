@@ -1,0 +1,26 @@
+@import '/src/variables.scss';
+
+.main {
+    padding: 30px;
+    position: relative;
+}
+.text {
+    font-size: $big-size;
+    font-weight: 500;
+}
+.yes {
+    background: $color-blue;
+    margin-right: 20px;
+}
+.buttons {
+    display: flex;
+    margin-top: 20px;
+}
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}

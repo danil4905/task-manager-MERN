@@ -1,0 +1,19 @@
+@import '/src/variables.scss';
+
+.fileInfo {
+    display: flex;
+    align-items: center;
+}
+.fileName {
+    margin: 0 10px 0 12px;
+}
+.fileSize {
+    opacity: 0.6;
+}
+.fileDelete {
+    background-color: white;
+    color: $color-red;
+}
+.delete {
+    margin: 0 10px 0 30px;
+}

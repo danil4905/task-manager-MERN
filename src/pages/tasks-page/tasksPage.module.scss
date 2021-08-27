@@ -1,0 +1,19 @@
+@import '/src/variables.scss';
+
+.labels {
+    display: grid;
+    grid-template-columns: 413px 207px 207px 207px;
+    font-weight: 500;
+    font-size: $small-size;
+    color:$color-txt;
+    margin-top: 40px;
+}
+.newTask {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    border-radius: 4px;
+}
+.tasks {
+    margin-top: 20px;
+}

@@ -1,0 +1,54 @@
+@import '../../variables.scss';
+
+.wrapper {
+    cursor:pointer;
+    &:hover {
+        img {
+            filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.4));
+        }
+    }
+}
+.image {
+    width: 393px;
+    height: 250px;
+    border-radius: 6px;
+    margin-bottom: 17px;
+    img {
+        transition: 0.2s ease;
+        width: 393px;
+    }
+}
+
+.title {
+    font-size: $regular-size;
+}
+
+.contentType {
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0 5px;
+}
+
+.info {
+    font-size: $regular-size;
+    color: $color-txt;
+}
+
+.text {
+    margin: 10px 0 6px;
+}
+
+.dot {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 6px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #70B2FF;
+}
+
+.author,
+.date {
+    opacity: 0.6;
+}

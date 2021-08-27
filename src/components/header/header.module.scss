@@ -1,0 +1,56 @@
+@import '../../variables.scss';
+
+header {
+  background-color: white;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: $header-border;
+  font-size: $regular-size;
+  color: $color-txt;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftSide {
+  display: flex;
+  align-items: center;
+}
+
+.user,
+.rightSide {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.userName {
+  margin: 0 20px 0 40px;
+}
+
+
+.userAvatar {
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+  &:hover {
+    .avatarImg {
+      border: 1px solid $color-blue;
+    }
+  }
+}
+
+.avatarImg {
+  border: 1px solid white;
+  transition: 0.2s ease;
+  border-radius: 50%;
+}
+.arrow {
+  background-color: white;
+  border: none;
+  margin-left: 10px;
+}

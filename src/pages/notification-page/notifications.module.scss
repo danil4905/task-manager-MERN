@@ -1,0 +1,19 @@
+@import '../../variables.scss';
+.wrapper {
+    width: 804px;
+    margin: 40px auto;
+}
+.title {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    h2 {
+        font-size: $extra-big-size;
+    }
+}
+.content {
+    background-color: white;
+    border-radius: 4px 4px 0px 0px;
+}

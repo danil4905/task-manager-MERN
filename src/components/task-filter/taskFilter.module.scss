@@ -1,0 +1,22 @@
+@import "/src/variables.scss";
+
+.filter {
+  margin: 40px 0 30px;
+  display: grid;
+  grid-template-columns: 393px 393px 393px;
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+}
+.search {
+  width: 393px;
+}
+.type {
+  display: flex;
+}
+.tasks {
+  margin: 10px 0 30px;
+  display: grid;
+  grid-template-columns: 393px 187px 187px 393px;
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+}

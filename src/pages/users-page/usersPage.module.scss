@@ -1,0 +1,20 @@
+@import "/src//variables.scss";
+.wrapper {
+  padding-top: 40px;
+}
+.sortingInputs {
+  display: flex;
+}
+.labels {
+  display: grid;
+  grid-template-columns: 414px 414px;
+}
+.text {
+  margin-bottom: 10px;
+  font-size: $small-size;
+  font-weight: 500;
+}
+.newUser {
+  float: right;
+  margin: 30px 0 20px 0;
+}

@@ -1,0 +1,40 @@
+@import '/src//variables.scss';
+
+.notification__linkItem {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 4px;
+    &:hover {
+      border: 1px solid #E8F3FF;
+    }
+  }
+  .notification__link {
+      position: relative;
+  }
+  .activeNoti {
+    background-color: $color-ltblue;
+  }
+  .navLink {
+    color: $color-txt;
+    margin-left: 40px;
+  }
+  .count {
+      position: absolute;
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      border: 2px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: $small-size;
+      font-weight: 500;
+      background-color: #FF603E;
+      top: 2px;
+      right: 2px;
+  }

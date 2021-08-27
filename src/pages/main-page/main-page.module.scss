@@ -1,0 +1,8 @@
+@import '../../variables.scss';
+
+.gridContent, .filter {
+    display: grid;
+    grid-template-columns: 393px 393px 393px;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+}

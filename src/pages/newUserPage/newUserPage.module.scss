@@ -1,0 +1,109 @@
+@import "/src/variables.scss";
+.container {
+  width: 806px!important;
+}
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0 30px 0;
+  width: 210px;
+}
+.topNav {
+  display: flex;
+  align-items: center;
+  margin: 40px 0 30px 0;
+}
+.wrapper {
+  background-color: white;
+  border: 1px solid #d8e3ec;
+  border-radius: 4px;
+  padding: 40px 50px 50px 40px;
+  min-height: 472px;
+}
+.wrapperProfile {
+  background-color: white;
+  border: 1px solid #d8e3ec;
+  border-radius: 4px;
+  padding: 40px 50px 50px 40px;
+  min-height:316px;
+}
+.form {
+  display: flex;
+}
+.leftSide {
+  width: 176px;
+}
+.rightSide {
+  display: flex;
+  flex-direction: column;
+}
+.formImage {
+  width: 120px;
+}
+.input {
+  width: 530px;
+  margin-bottom: 20px;
+}
+.label {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: $small-size;
+  position: relative;
+}
+.avatar {
+  width: 140px;
+  height: 140px;
+}
+.save,
+.delete {
+  margin-right: 10px;
+}
+.btnSave {
+  background-color: $color-blue;
+  width: 130px;
+  &:hover {
+    background-color: #308fff;
+  }
+  &:active {
+    background-color: #0067df;
+  }
+}
+.labelFile {
+  position: relative;
+  font-weight: 500;
+  font-size: $regular-size;
+  color: #107eff;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.fileInput {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 115px;
+  cursor: pointer;
+}
+.showBtn {
+  position: absolute;
+  width: 20px;
+  height: 13px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  top: 38px;
+  left: 495px;
+}
+.btnDelete {
+  color:#FF603E;
+  background-color: white;
+}
+.buttonsButtom {
+  display: flex;
+  justify-content: space-between;
+  cursor:pointer;
+}
+.avatar {
+  border-radius: 50%;
+}

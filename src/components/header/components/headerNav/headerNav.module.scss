@@ -1,0 +1,17 @@
+@import '/src/variables.scss';
+
+.activeNav {
+    background-color: $color-ltblue;
+    color: $color-blue;
+    border-radius: 4px;
+    padding: 9px 12px;
+  }
+  .navLink {
+    color: $color-txt;
+    margin-left: 40px;
+    padding: 9px 12px;
+  }
+  .nav ul {
+    display: flex;
+    align-items: center;
+  }

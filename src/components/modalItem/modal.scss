@@ -1,0 +1,69 @@
+@import '/src/variables.scss';
+
+.ReactModal__Overlay,
+.ReactModal__Body--open {
+    overflow: hidden;
+    z-index: 3;
+}
+
+.ReactModal__Overlay--after-open {
+    background: rgba(0, 0, 0, 0.85) !important
+}
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+.mainInfo {
+    color: white;
+    font-size: $regular-size;
+    line-height: 14px;
+    margin-left: 20px;
+}
+
+.mainInfo-type__name {
+    font-weight: 500;
+    margin: 0 5px 0px 5px;
+}
+
+.modal-wrap {
+    display: flex;
+}
+
+.mainInfo-type__length,
+.mainInfo-text__date {
+    opacity: 0.6;
+}
+
+.mainInfo-text__date {
+    font-size: $small-size;
+    line-height: 14px;
+    margin-left: 5px;
+
+}
+
+.mainInfo-text {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.playerModal {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow_back path {
+    stroke: white;
+}

@@ -1,0 +1,51 @@
+@import '/src//variables.scss';
+
+.user,
+.rightSide {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.userName {
+    margin: 0 20px 0 40px;
+}
+.notification__linkItem {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 4px;
+
+    &:hover {
+        border: 1px solid #E8F3FF;
+    }
+}
+.activeNoti {
+    background-color: $color-ltblue;
+}
+.userAvatar {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+        .avatarImg {
+            border: 1px solid $color-blue;
+        }
+    }
+}
+.avatarImg {
+    border: 1px solid white;
+    transition: 0.2s ease;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+.arrow {
+    background-color: white;
+    border: none;
+    margin-left: 10px;
+}

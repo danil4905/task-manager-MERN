@@ -1,0 +1,45 @@
+@import './variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-main;
+  background-color: $color-main-bg;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  width: 1220px;
+  margin: 0 auto;
+}
+
+.itemContent__audio {
+  color: $color-yellow-audio;
+}
+
+.itemContent__video {
+  color: $color-blue;
+}
+
+.itemContent__photo {
+  color: $color-green-photo;
+}
+.inWork {
+  color: #D663FF;
+}
+.pending {
+  color: #2CCCFF;
+}
+.done {
+  color: #97DC26;
+}

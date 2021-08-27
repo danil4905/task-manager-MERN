@@ -1,0 +1,45 @@
+@import "/src/variables.scss";
+
+.wrapper {
+  background-color: $color-main-bg;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+  font-family: $font-main;
+}
+.title {
+  font-weight: 500;
+  font-size: $extra-big-size;
+  margin-bottom: 20px;
+}
+.loginLabel {
+  font-weight: 500;
+  font-size: $small-size;
+  line-height: 14px;
+}
+.loginForm {
+  background-color: white;
+  border: 1px solid #d8e3ec;
+  border-radius: 4px;
+  width: 394px;
+  height: 344px;
+  padding: 30px 30px 50px;
+  margin-top: 50px;
+}
+.loginInput {
+  background-color: white;
+  font-size: $regular-size;
+  margin: 9px 0 20px;
+  width: 334px;
+}
+.icon {
+  margin-right: 5px;
+}
+.error {
+  color: $color-red;
+  font-weight: 500;
+  font-size: $small-size;
+  line-height: 34px;
+}
