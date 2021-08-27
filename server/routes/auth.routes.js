@@ -6,11 +6,11 @@ const router = new Router();
 const jwt = require("jsonwebtoken");
 const { check, validationResult } = require("express-validator");
 const authMiddleware = require("../middleware/auth.middleware");
-const fileMiddleware = require("../middleware/fileMiddleware");
+const photoMiddleware = require("../middleware/photoMiddleware");
 
 router.post(
   "/registration",
-  fileMiddleware.single("avatar"),
+  photoMiddleware.single("avatar"),
   [
     check("email", "Неправильный email").isEmail(),
     check(

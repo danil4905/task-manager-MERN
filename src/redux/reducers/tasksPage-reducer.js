@@ -7,6 +7,7 @@ const INITIAL_STATE = {
   searchInput: "",
   dateInput: "",
   selectInput:"",
+  error:''
 };
 
 const tasksPageReducer = (state = INITIAL_STATE, action) => {
@@ -40,6 +41,11 @@ const tasksPageReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         selectInput:action.payload,
+      }
+    case constants.tasksPage.DELETE_TASK_FAILURE:
+      return {
+        ...state,
+        error:action.payload,
       }
 
     default:

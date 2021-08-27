@@ -199,7 +199,9 @@
 .newTask-btn {
   background-color: $color-blue;
 }
-.editUser,.deleteUser {
+.editUser,
+.deleteUser,
+.editTask {
   background-color: $color-ltblue;
   width: 34px;
   height: 34px;
@@ -207,7 +209,73 @@
   align-items: center;
   justify-content: center;
 }
-.img__editUser {
+.img__editUser,
+.img__editTask {
   background: $color-ltblue;
   margin-left: 5px;
 }
+.img__download {
+  background-color: $color-ltblue;
+}
+.download {
+  width: 88px;
+  height: 30px;
+  background-color: $color-ltblue;
+  color: $color-blue;
+  font-size: $small-size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border-radius: 4px;
+  img {
+    margin-right: 5px;
+  }
+  .img-wrap {
+    background-color: $color-ltblue;
+  }
+}
+.editTaskBlue {
+  background-color: $color-blue;
+  margin-left: 20px;
+  width: 40px;
+  img {
+    background-color: $color-blue;
+  }
+  .img-wrap {
+    margin: 0;
+  }
+  &:hover {
+    background-color: #308fff;
+    img {
+      background-color: #308fff;
+    }
+  }
+
+  &:active {
+    background-color: #0067df;
+    img {
+      background-color: #0067df;
+    }
+  }
+}
+.deleteTaskFull {
+  background-color: $color-blue;
+  width: 40px;
+  &:hover {
+    background-color: #308fff;
+  }
+  &:active {
+    background-color: #0067df;
+  }
+}
+.publishTask {
+  background-color: $color-green-photo;
+  &:hover {
+    background-color: #51efac;
+  }
+
+  &:active {
+    background-color: #33cd8c;
+  }
+} 

@@ -1,45 +1,90 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 * {
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: $font-main;
   background-color: $color-main-bg;
 }
-
 a {
   text-decoration: none;
 }
-
 li {
   list-style-type: none;
 }
-
 .container {
   width: 1220px;
   margin: 0 auto;
 }
-
 .itemContent__audio {
   color: $color-yellow-audio;
 }
-
 .itemContent__video {
   color: $color-blue;
 }
-
 .itemContent__photo {
   color: $color-green-photo;
 }
 .inWork {
-  color: #D663FF;
+  color: #d663ff;
 }
 .pending {
-  color: #2CCCFF;
+  color: #2cccff;
 }
 .done {
-  color: #97DC26;
+  color: #97dc26;
+}
+.deleteTask {
+  background-color: $color-ltblue;
+  width: 34px;
+  height: 34px;
+}
+input:invalid {
+  border: 1px solid red;
+}
+.content-maker {
+  grid-template-columns: 74px 622px 185px 136px 160px !important;
+}
+.acitveFile {
+  background-color: $color-ltblue;
+  border: 1px solid $color-blue;
+}
+.invalidInput {
+  border: 1px solid #FF603E;
+  border-radius: 4px;
+}
+.Select-arrow-zone  {
+  background-color: black!important;
+}
+.css-tlfecz-indicatorContainer {
+  &:after {
+    content: url(./assets/arrow-down.svg);
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 6px;
+    height: 6px;
+  }
+  svg {
+    display: none;
+  }
+}
+.css-1okebmr-indicatorSeparator {
+  display: none;
+}
+.css-1gtu0rj-indicatorContainer {
+  &:after {
+    content: url(./assets/arrow-down.svg);
+    position: absolute;
+    top: 27px;
+    right: 15px;
+    transform: rotate(180deg);
+    width: 6px;
+    height: 6px;
+  }
+  svg {
+    display: none;
+  }
 }

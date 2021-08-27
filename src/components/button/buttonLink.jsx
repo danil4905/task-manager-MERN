@@ -15,7 +15,8 @@ const ButtonLink = (props) => {
       to={props.path}
       onClick={edit ? setUserId : ()=>{}}
       className={"default-btn " + props.type}
-    >
+      target={props.target}
+      >
       <div className="img-wrap">
         <img src={props.img} className={'img__'+props.type} alt="#" />
       </div>

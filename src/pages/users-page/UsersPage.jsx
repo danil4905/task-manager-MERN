@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import crossIcon from "../../assets/Plus.png";
 import { Sorting } from "../../utils/sorting";
 import { Redirect } from "react-router-dom";
+import Preloader from "../../components/preloader/preloader";
 
 const UsersPage = (props) => {
   let params = {
@@ -13,10 +14,9 @@ const UsersPage = (props) => {
     search: useSelector((state) => state.inputs.searchInputUsersPage),
   };
   let filtered = Sorting(props.users, params);
-  if (props.userRole !== 'admin') {
-    return (<Redirect to='/' />)
-  }
-  else
+  if (props.userRole !== "admin") {
+    return <Redirect to="/" />;
+  } else
     return (
       <div className="container">
         <section className={classes.wrapper}>
@@ -38,18 +38,24 @@ const UsersPage = (props) => {
               type="newUser-btn"
             />
           </div>
-          <section className={classes.listOfUsers}>
-            {filtered.map((element) => (
-              <UserItem
-                author={element.name}
-                key={element._id}
-                email={element.email}
-                img={element.avatar}
-                role={element.role}
-                id={element._id}
-              />
-            ))}
-          </section>
+          {!filtered[0] ? (<>
+            <span className={classes.error}>Пользователи не найдены :(</span>
+              <Preloader />
+            </>
+          ) : (
+            <section className={classes.listOfUsers}>
+              {filtered.map((element) => (
+                <UserItem
+                  author={element.name}
+                  key={element._id}
+                  email={element.email}
+                  img={element.avatar}
+                  role={element.role}
+                  id={element._id}
+                />
+              ))}
+            </section>
+          )}
         </section>
       </div>
     );

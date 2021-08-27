@@ -4,12 +4,14 @@ const Task = new Schema({
   name: { type: String, required: true },
   type: { type: String, required: true },
   description: { type: String, required: true },
-  files: [{ type: ObjectId, ref: "File" }],
-  author: { type: ObjectId, ref: "User" },
-  executor: { type: ObjectId, ref: "User" },
+  files: [{ type: Object, }],
+  author: { type: Object,  },
+  status:{type:String},
+  executor: { type: Object, },
   dateCreated: { type: Date, default: Date.now },
   dateExpired: { type: Date, required: true },
-  contents: [{ type: ObjectId, ref: "Content" }],
+  contents: [{ type: Object, }],
+  comments:[{type:Object,}]
 });
 
 module.exports = model('Task',Task);

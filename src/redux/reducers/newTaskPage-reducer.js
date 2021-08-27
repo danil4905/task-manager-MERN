@@ -7,6 +7,7 @@ const INITIAL_STATE = {
   author: "",
   executor: "",
   dateExpired: "",
+  error: "",
 };
 
 const newTaskPageReducer = (state = INITIAL_STATE, action) => {
@@ -17,11 +18,26 @@ const newTaskPageReducer = (state = INITIAL_STATE, action) => {
         [action.payload.name]: action.payload.value,
       };
     case constants.newTaskPage.CHANGE_NEW_TASK_DATE:
-        return {
-            ...state,
-            dateExpired:action.payload
-        }
-
+      return {
+        ...state,
+        dateExpired: action.payload,
+      };
+    case constants.newTaskPage.CREATE_NEW_TASK_SUCCESS:
+      return {
+        ...state,
+        name: "",
+        type: "",
+        description: "",
+        author: "",
+        executor: "",
+        dateExpired: "",
+        error: "",
+      };
+    case constants.newTaskPage.CREATE_NEW_TASK_FAILURE:
+      return {
+        ...state,
+        error: action.payload,
+      };
     default:
       return state;
   }

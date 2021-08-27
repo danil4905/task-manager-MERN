@@ -1,0 +1,49 @@
+@import '/src/variables.scss';
+
+.wrapper {
+    font-family: $font-main;
+    background-color: white;
+    width: 807px;
+    border: 1px solid #D8E3EC;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+.results,
+.comments {
+    padding: 30px;
+}
+.title {
+    font-weight: 500;
+    font-size: $extra-regular-size;
+    line-height: 19px;
+    margin-right: 20px;
+}
+.formatWrap,
+.topNav {
+    display: flex;
+}
+.formats {
+    opacity: 0.6;
+    font-size: $regular-size;
+}
+.comments {
+    padding-bottom: 0;
+    border-top: 1px solid #D8E3EC;
+}
+.btnWrapper {
+    position: relative;
+}
+.textarea {
+    width: 747px;
+    height: 117px;
+    resize: none;
+    padding:10px;
+    font-family: $font-main ;
+}
+.button {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    background-color: $color-blue;
+}

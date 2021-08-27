@@ -1,10 +1,10 @@
 import API from "../../utils/newApi";
 
 export const optionStatus = [
-  { value: "Любой", label: "Любой" },
-  { value: "В работе", label: "В работе" },
-  { value: "Выполнено", label: "Выполнено" },
-  { value: "Ожидает согласования", label: "Ожидает согласования" },
+  { value: "all", label: "Любой" },
+  { value: "inWork", label: "В работе" },
+  { value: "done", label: "Выполнено" },
+  { value: "pending", label: "Ожидает согласования" },
 ];
 
 export const roles = [
@@ -12,6 +12,11 @@ export const roles = [
   { value: "admin", label: "Админ" },
   { value: "manager", label: "Менеджер" },
 ];
+export const contentType =[
+  { value: "audio", label: "Аудио" },
+  { value: "video", label: "Видео" },
+  { value: "photo", label: "Фото" },
+]
 
 export const getUsersOptions = async () => {
   let options = [];

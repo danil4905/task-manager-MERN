@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteUser } from "../../redux/actions/newUser-actions";
 import { Logout } from "../../redux/actions/auth-actions";
 import {wordType} from '../../utils/alertWord';
+import { deleteTask } from "../../redux/actions/tasksPage-actions";
 
 const AlertAccept = (props) => {
   const dispatch = useDispatch();
@@ -17,7 +18,8 @@ const AlertAccept = (props) => {
       dispatch(closeAlert());
     }
     if (props.type === "task") {
-      dispatch();
+      dispatch(deleteTask(props.id));
+      dispatch(closeAlert());
     }
     if (props.type === "profile") {
       dispatch(Logout());

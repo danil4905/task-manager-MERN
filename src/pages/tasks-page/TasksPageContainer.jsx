@@ -16,11 +16,11 @@ const TasksPageContainer = (props) => {
   const state = useSelector((state) => state.tasksPage);
   const dispatch = useDispatch();
   const [tasks, setContents] = useState([]);
-  useEffect(() => {
-    API.get("api/contents").then((res) => {
-      setContents(res.data.concat(res.data));
+  useEffect( () => {
+     API.get("api/tasks").then((res) => {
+      setContents(res.data);
     });
-  }, []);
+  }, [tasks]);
   return (
     <TasksPage
       tasks={tasks}

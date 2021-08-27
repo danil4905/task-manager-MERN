@@ -12,7 +12,7 @@ const UsersPageContainer = (props) => {
     API.get("api/users").then((res) => {
       setUsersData(res.data);
     });
-  }, []);
+  }, );
   dispatch(setUsers(users));
   return <UsersPage users={users} userRole={userAccessRole} />;
 };

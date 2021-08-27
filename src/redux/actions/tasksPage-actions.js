@@ -1,4 +1,5 @@
 import { constants } from "../const/constants";
+import API from '../../utils/newApi';
 
 export const togglePhotoButtonTask = () => ({ type: constants.tasksPage.TOGGLE_PHOTO_BUTTON_TASK });
 export const toggleAudioButtonTask = () => ({ type: constants.tasksPage.TOGGLE_AUDIO_BUTTON_TASK });
@@ -15,3 +16,20 @@ export const writeSelectTask = (inputValue) => ({
   type:constants.tasksPage.WRITE_SELECT_TASK,
   payload:inputValue,
 })
+export const deleteTask = (id) => {
+  return (dispatch) => {
+    API.delete("/api/tasks/" + id)
+      .then((response) =>
+        dispatch({
+          type: constants.tasksPage.DELETE_TASK_SUCCESS,
+          payload: response.data,
+        })
+      )
+      .catch((error) =>
+        dispatch({
+          type: constants.tasksPage.DELETE_TASK_FAILURE,
+          payload: error,
+        })
+      );
+  };
+};

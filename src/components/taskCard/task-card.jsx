@@ -1,13 +1,19 @@
 import { chooseRole } from "../../utils/chooseRole";
 import { chooseType } from "../../utils/chooseType";
-import ButtonAction from "../button/buttonAction";
+import ButtonLink from "../button/buttonLink";
 import classes from "./task-card.module.scss";
 import videoIcon from "../../assets/video.svg";
 import audioIcon from "../../assets/audio.svg";
 import photoIcon from "../../assets/photo.svg";
 import dateIcon from "../../assets/dateIcon.svg";
+import ediIcon from "../../assets/edit-iconBlue.svg";
+import deleteicon from "../../assets/delete-icon.svg";
+import { Link } from "react-router-dom";
+import AlertAccept from "../alert/alertAccept";
+import {useDispatch} from 'react-redux';
+import {openAlert} from '../../redux/actions/alert-actions';
 
-const typeIcon = (type) => {
+export const typeIcon = (type) => {
   switch (type) {
     case "audio":
       return audioIcon;
@@ -21,8 +27,10 @@ const typeIcon = (type) => {
 };
 
 const TaskCard = (props) => {
+  const dispatch = useDispatch()
   return (
-    <section className={classes.wrap}>
+    <div className={classes.wrap}>
+    <Link to={`/task/${props.id}`} className={classes.wrapLink+' '+ props.role}>
       <div className={classes.type}>
         <img src={typeIcon(props.type)} alt="#" className={classes.typeImg} />
         <span className={classes.typeText + " itemContent__" + props.type}>
@@ -30,19 +38,29 @@ const TaskCard = (props) => {
         </span>
       </div>
       <div className={classes.title}>{props.title}</div>
-      <div className={classes.author}>{props.author}</div>
+      <div className={classes.author}>{props.author.name}</div>
       <div className={classes.date}>
         <img src={dateIcon} alt="#" className={classes.dateIcon} />
-        <span className={classes.dateText}>{props.date}</span>
+        <span className={classes.dateText}>{new Date(props.date).toLocaleDateString().split("/").join(".") }</span>
       </div>
       <div className={`${classes.status} ${props.status}`}>
         {chooseRole(props.status)}
       </div>
+      </Link>
+      {props.role === 'content-maker'? '':
       <div className={classes.controls}>
-        <ButtonAction type="edit" />
-        <ButtonAction type="delete" />
+      <ButtonLink
+          type="editTask"
+          path={"editTask/"+props.id}
+          data={props}
+          edit={true}
+          img={ediIcon}
+        />
+        <button className={'default-btn deleteTask'}> <img src={deleteicon} alt="delete" onClick={() => dispatch(openAlert('isOpenedTask'))} /></button>
       </div>
-    </section>
+      }
+      <AlertAccept type='task' id={props.id} />
+    </div>
   );
 };
 

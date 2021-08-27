@@ -1,0 +1,87 @@
+@import '/src/variables.scss';
+.topWrap {
+    margin: 30px 0 20px;
+}
+.back {
+    color:$color-blue;
+}
+.controls,.topWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.controls {
+    button {
+        margin-left: 20px;
+    }
+}
+.managerPanel {
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-main;
+}
+.taskMainInfo {
+    width: 807px;
+    min-height: 446px;
+}
+.taskAddInfo {
+    width: 395px;
+    height: 205px;
+}
+.taskMainInfo, .taskAddInfo {
+    background-color: white;
+    border: 1px solid #D8E3EC;
+    border-radius: 4px;
+    padding: 30px;
+}
+.typeImg {
+    margin-right: 5px;
+}
+.typeText {
+    margin-right: 20px;
+}
+.typeText, .statusText {
+    font-size: $regular-size;
+    font-weight: 500;
+}
+.title {
+    font-weight: 500;
+    font-size: $big-size;
+    margin: 15px 0;
+}
+.descriptions {
+    font-size: $regular-size;
+    line-height: 21px;
+    height: 147px;
+}
+.filesTitle {
+    font-weight: 500;
+    font-size: $small-size;
+    margin-top: 20px;
+}
+.taskAddInfoItem {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: $regular-size;
+    white-space : nowrap; 
+    margin-bottom:20px;
+}
+.devineBlock {
+    display: block;
+    width: 100%;
+    height: $regular-size;
+    border-bottom: 1px solid #D8E3EC;
+}
+.topNavTitle {
+    opacity: 0.6;
+}
+.filesTitle {
+    border-bottom: 1px solid #D8E3EC;
+    padding-bottom: 10px;
+}
+.noFiles {
+    font-size: $regular-size;
+    display: block;
+    margin: 20px 0 0 20px;
+}

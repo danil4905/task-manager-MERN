@@ -2,6 +2,9 @@ const express = require('express')
 const mongoose= require('mongoose')
 const config = require('config')
 const authRouter = require('./routes/auth.routes')
+const tasksRouter = require('./routes/tasks.routes')
+const commentsRouter = require('./routes/comments.routes');
+const contentsRouter = require('./routes/contents.routes');
 const app = express()
 const User = require('./models/User')
 const Content = require('./models/Content')
@@ -10,12 +13,16 @@ const path = require("path");
 const PORT = config.get('serverPort')
 const jsonParser = express.json();
 const corsMiddleware = require('./middleware/cors.middleware')
-const fileMiddleware = require('./middleware/fileMiddleware')
+const photoMiddleware = require('./middleware/photoMiddleware')
+const Task = require('./models/Task')
 
 app.use('/static', express.static(path.join(__dirname, 'public')))
 app.use(corsMiddleware)
 app.use(express.json())
 app.use('/api/auth',authRouter)
+app.use('/api',tasksRouter)
+app.use('/api',commentsRouter)
+app.use('/api',contentsRouter)
 
 app.get("/api/users", function (req, res) {
   User.find({}, function (err, users) {
@@ -37,7 +44,7 @@ app.delete("/api/users/:id", function (req, res) {
     res.send(user);
   });
 });
-app.put("/api/users", jsonParser,fileMiddleware.single("avatar"), function (req, res) {
+app.put("/api/users", jsonParser,photoMiddleware.single("avatar"), function (req, res) {
   if (!req.body) return res.sendStatus(400);
   const id = req.body.id;
   const userName = req.body.name;
@@ -59,7 +66,7 @@ app.put("/api/users", jsonParser,fileMiddleware.single("avatar"), function (req,
 });
 app.patch(
   "/api/users/:id",
-  fileMiddleware.single("avatar"),
+  photoMiddleware.single("avatar"),
   function (req, res) {
     if (!req.body) return res.sendStatus(400);
     if (!req.params.id) return res.sendStatus(400);
@@ -86,6 +93,17 @@ app.patch(
   }
 );
 app.get("/api/contents", function (req, res) {
+  Content.find({}, function (err, content) {
+    if (err) return console.log(err);
+    res.send(content);
+  });
+});
+app.get("/api/contents/:id", function (req, res) {
+  const id = req.params.id;
+  Task.find({task:id}, function (err, content) {
+    if (err) return console.log(err);
+    res.send(content);
+  })
   Content.find({}, function (err, content) {
     if (err) return console.log(err);
     res.send(content);

@@ -9,6 +9,7 @@ import newUserReducer from './newUser-reducer';
 import playerReducer from './player-reducer';
 import tasksPageReducer from "./tasksPage-reducer";
 import usersPageReducer from './usersPage-reducer';
+import editTaskPageReducer from "./editTaskPage-reducer";
 
 
 export let rootReducers = combineReducers({
@@ -17,9 +18,10 @@ export let rootReducers = combineReducers({
   player: playerReducer,
   usersPage: usersPageReducer,
   newUserPage: newUserReducer,
-  tasksPage:tasksPageReducer,
+  tasksPage: tasksPageReducer,
   newTaskPage: newTaskPageReducer,
+  editTaskPage: editTaskPageReducer,
   auth: authReducer,
   inputs: InputsReducer,
-  alert:alertReducer,
+  alert: alertReducer,
 });

@@ -6,20 +6,25 @@ import ErrorPage from "./pages/error-page/ErrorPage";
 import Header from "./components/header/Header";
 import NotificationsContainer from "./pages/notification-page/NotificationsContainer";
 import UsersPageContainer from "./pages/users-page/UsersPageContainer";
+import TasksPageContainer from "./pages/tasks-page/TasksPageContainer";
+import NewTaskPageContainer from "./pages/newTaskPage/NewTaskPageContainer";
+import FullTaskPageContainer from "./pages/fullTaskPage/FullTaskPageContainer";
+import EditTaskPageContainer from "./pages/editTaskPage/EditTaskPageContainer";
+import PublishPage from "./pages/publish/PublishPage";
 import LoginPage from "./pages/login-page/LoginPage";
 import ProfilePage from "./pages/profile-page/ProfilePage";
 import "./App.scss";
 import NewUserPage from "./pages/newUserPage/newUserPage";
 import { useEffect } from "react";
-import TasksPageContainer from "./pages/tasks-page/TasksPageContainer";
-import NewTaskPageContainer from "./pages/newTaskPage/NewTaskPageContainer";
+
 
 function App() {
-  const isAuth = useSelector((state) => state.auth.isLogined);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(Auth());
-  }, [dispatch]);
+   dispatch(Auth());
+  }, []);
+  const isAuth = useSelector( (state) => state.auth.isLogined);
+  debugger;
   return (
     <BrowserRouter>
       <div className="App">
@@ -68,6 +73,36 @@ function App() {
                 <Header />
                 <main className="app-wrapper">
                   <TasksPageContainer />
+                </main>
+              </>
+            )}
+          </Route>
+          <Route exact path="/publishTask/:id">
+          <Header />
+                <main className="app-wrapper">
+                  <PublishPage />
+                </main>
+          </Route>
+          <Route path="/task/:id">
+            {!isAuth ? (
+              <Redirect to="/login" />
+            ) : (
+              <>
+                <Header />
+                <main className="app-wrapper">
+                  <FullTaskPageContainer />
+                </main>
+              </>
+            )}
+          </Route>
+          <Route path="/editTask/:id">
+            {!isAuth ? (
+              <Redirect to="/login" />
+            ) : (
+              <>
+                <Header />
+                <main className="app-wrapper">
+                  <EditTaskPageContainer />
                 </main>
               </>
             )}

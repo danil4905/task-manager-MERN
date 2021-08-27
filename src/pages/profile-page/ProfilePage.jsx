@@ -19,6 +19,7 @@ const ProfilePage = (props) => {
   const avatar = useSelector(state => state.auth.avatar)
   const [preview, setImg] = useState(defaultAvatar)
   const [img,setItem] = useState(null);
+  const [isFetching,setIsFetching] = useState(false)
   function onFileChange(e) {
     setImg(URL.createObjectURL(e.target.files[0]))
     setItem(e.target.files[0])
@@ -26,6 +27,7 @@ const ProfilePage = (props) => {
     console.log(e.target.files[0])
   }
   function handleSubmit (e) {
+    setIsFetching(true);
     e.preventDefault();
     const formData = new FormData();
     formData.append('name',name);
@@ -33,6 +35,7 @@ const ProfilePage = (props) => {
     formData.append('avatar', img);
     dispatch(editProfile(id,formData));
     console.log(avatar)
+    setIsFetching(false);
   }
 
   return (
@@ -81,7 +84,7 @@ const ProfilePage = (props) => {
             <div className={classes.buttonsButtom}>
                 <button
                   type='submit'
-                  className={"default-btn " + classes.btnSave}>
+                  className={"default-btn " + classes.btnSave} disabled={isFetching} >
                   <img src={saveIcon} alt="save" className={classes.save} />
                   Сохранить
                 </button>

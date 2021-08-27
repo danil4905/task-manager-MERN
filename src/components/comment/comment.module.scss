@@ -1,0 +1,35 @@
+@import "/src/variables.scss";
+
+.card {
+  width: 100%;
+  display: flex;
+  color: $color-txt;
+  font-size: $regular-size;
+  padding: 15px 0;
+  border-bottom: 1px solid #D8E3EC;
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+}
+.name {
+  font-weight: 500;
+  line-height: 18px;
+}
+.message {
+    line-height: 21px;
+}
+.topInfo {
+    display: flex;
+    align-items: center;
+}
+.dateTime {
+    opacity: 0.6;
+    font-size: $small-size;
+    width: 94px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}

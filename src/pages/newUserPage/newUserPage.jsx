@@ -15,18 +15,17 @@ import { getUser } from "../../redux/actions/newUser-actions";
 import { register } from "../../redux/actions/auth-actions";
 import AlertAccept from "../../components/alert/alertAccept";
 import { openAlert } from "../../redux/actions/alert-actions";
-import {editUser} from '../../redux/actions/newUser-actions'
-import {chooseRole} from '../../utils/chooseRole.js';
-import {roles} from '../../redux/const/options.js';
+import { editUser } from "../../redux/actions/newUser-actions";
+import { chooseRole } from "../../utils/chooseRole.js";
+import { roles } from "../../redux/const/options.js";
 
 const NewUserPage = (props) => {
-
   const dispatch = useDispatch();
   const [visible, setVisible] = useState(false);
-  const state = useSelector(state => state.newUserPage);
-  const error = useSelector(state => state.newUserPage.error);
-  const [img,setImg] = useState(defaultAvatar);
-  const [avatar,setAvatar] = useState(null);
+  const state = useSelector((state) => state.newUserPage);
+  const error = useSelector((state) => state.newUserPage.error);
+  const [img, setImg] = useState(defaultAvatar);
+  const [avatar, setAvatar] = useState(null);
   let userId = useSelector((state) => state.newUserPage.currentUserid);
 
   let newUser = {
@@ -35,21 +34,19 @@ const NewUserPage = (props) => {
     password: state.password,
     avatar: state.avatar,
     role: state.role,
-  }
+  };
   let editUserData = {
-    id:userId,
+    id: userId,
     name: state.editName,
-    email:state.editEmail,
+    email: state.editEmail,
     password: state.editPassword,
     avatar: state.editAvatar,
-    role: state.editRole
-  }
-  
+    role: state.editRole,
+  };
   let editMode = null;
   if (props.location.pathname === "/users/newUser") {
     editMode = false;
-  }
-  else {
+  } else {
     editMode = true;
   }
   useEffect(() => {
@@ -59,7 +56,7 @@ const NewUserPage = (props) => {
     } else {
       dispatch(getUser(localStorage.userEditId * 1));
     }
-  }, [dispatch, userId])
+  }, [dispatch, userId]);
 
   function toogleVisible() {
     visible ? setVisible(false) : setVisible(true);
@@ -68,33 +65,33 @@ const NewUserPage = (props) => {
     e.preventDefault();
     if (!editMode) {
       const formData = new FormData();
-      formData.append('name', newUser.name);
-      formData.append('email', newUser.email);
-      formData.append('password', newUser.password);
-      formData.append('avatar', newUser.avatar);
-      formData.append('role', newUser.role)
+      formData.append("name", newUser.name);
+      formData.append("email", newUser.email);
+      formData.append("password", newUser.password);
+      formData.append("avatar", newUser.avatar);
+      formData.append("role", newUser.role);
       for (var [key, value] of formData.entries()) {
         console.log(key, value);
       }
       dispatch(register(formData));
-    }
-    else {
+    } else {
       const formData = new FormData();
-      formData.append('id', userId);
-      formData.append('name', editUserData.name);
-      formData.append('email', editUserData.email);
-      formData.append('password', editUserData.password);
-      formData.append('avatar', avatar);
-      formData.append('role', editUserData.role)
-      dispatch(editUser(formData))
+      formData.append("id", userId);
+      formData.append("name", editUserData.name);
+      formData.append("email", editUserData.email);
+      formData.append("password", editUserData.password);
+      if (avatar !== null) {
+        formData.append("avatar", avatar);
+      } else formData.append("avatar", editUserData.avatar);
+      formData.append("role", editUserData.role);
+      dispatch(editUser(formData));
     }
   }
   function upload(e) {
-    setImg(URL.createObjectURL(e.target.files[0]))
-    dispatch(changeNewUser('avatar', e.target.files[0]))
+    setImg(URL.createObjectURL(e.target.files[0]));
+    dispatch(changeNewUser("avatar", e.target.files[0]));
     setAvatar(e.target.files[0]);
   }
-  console.log(avatar)
 
   return (
     <>
@@ -109,7 +106,11 @@ const NewUserPage = (props) => {
             <div className={classes.leftSide}>
               <div className={classes.formImage}>
                 <img
-                  src={editMode && state.userData.avatar && img===defaultAvatar ? editUserData.avatar : img}
+                  src={
+                    editMode && state.userData.avatar && img === defaultAvatar
+                      ? editUserData.avatar
+                      : img
+                  }
                   className={classes.avatar}
                   alt="#"
                 />
@@ -118,8 +119,13 @@ const NewUserPage = (props) => {
                 <UploadIcon />
                 <label className={classes.labelFile}>
                   Загрузить аватар
-                  <input type="file" accept=".png, .jpg, .jpeg"
-                name="photo" className={classes.fileInput} onChange={(e) => upload(e)} />
+                  <input
+                    type="file"
+                    accept=".png, .jpg, .jpeg"
+                    name="photo"
+                    className={classes.fileInput}
+                    onChange={(e) => upload(e)}
+                  />
                 </label>
               </div>
             </div>
@@ -130,7 +136,11 @@ const NewUserPage = (props) => {
               <input
                 className={classes.input + " Input"}
                 type="text"
-                onChange={editMode ? (e) => dispatch(changeNewUser('editName', e.target.value)) : (e) => dispatch(changeNewUser('name', e.target.value))}
+                onChange={
+                  editMode
+                    ? (e) => dispatch(changeNewUser("editName", e.target.value))
+                    : (e) => dispatch(changeNewUser("name", e.target.value))
+                }
                 placeholder="Введите имя и фамилию"
                 id="newName"
                 value={editMode ? editUserData.name : newUser.name}
@@ -141,7 +151,12 @@ const NewUserPage = (props) => {
               <input
                 className={classes.input + " Input"}
                 type="email"
-                onChange={editMode ? (e) => dispatch(changeNewUser('editEmail', e.target.value)) : (e) => dispatch(changeNewUser('email', e.target.value))}
+                onChange={
+                  editMode
+                    ? (e) =>
+                        dispatch(changeNewUser("editEmail", e.target.value))
+                    : (e) => dispatch(changeNewUser("email", e.target.value))
+                }
                 placeholder="Введите e-mail"
                 id="newEmail"
                 value={editMode ? editUserData.email : newUser.email}
@@ -152,20 +167,17 @@ const NewUserPage = (props) => {
               <Select
                 className={classes.input}
                 options={roles}
-                inputValue={editMode ? chooseRole(editUserData.role): ''}
+                inputValue={editMode ? chooseRole(editUserData.role) : ""}
                 id="newRole"
-                onChange={ editMode ? (e) => dispatch(changeNewUser('editRole', e.value))
-                :  (e) => dispatch(changeNewUser('role', e.value))}
+                onChange={
+                  editMode
+                    ? (e) => dispatch(changeNewUser("editRole", e.value))
+                    : (e) => dispatch(changeNewUser("role", e.value))
+                }
                 placeholder="Выберите роль"
               />
               <label className={classes.label} htmlFor="newPassword">
                 Пароль
-                <button
-                  onClick={() => toogleVisible()}
-                  className={classes.showBtn}
-                >
-                  <img src={visible ? eyeOpen : eyeClose} alt="#" />
-                </button>
               </label>
               <input
                 className={classes.input + " Input"}
@@ -173,10 +185,14 @@ const NewUserPage = (props) => {
                 id="newPassword"
                 placeholder="Введите пароль"
                 value={editMode ? editUserData.password : newUser.password}
-                onChange={editMode ? (e) => dispatch(changeNewUser('editPassword', e.target.value))
-                : (e) => dispatch(changeNewUser('password', e.target.value))}
+                onChange={
+                  editMode
+                    ? (e) =>
+                        dispatch(changeNewUser("editPassword", e.target.value))
+                    : (e) => dispatch(changeNewUser("password", e.target.value))
+                }
               />
-              <span>{error ? error:''}</span>
+              <span>{error ? error : ""}</span>
               <div className={classes.buttonsButtom}>
                 <button
                   type="submit"
@@ -186,7 +202,10 @@ const NewUserPage = (props) => {
                   Сохранить
                 </button>
                 {editMode ? (
-                  <button className={"default-btn " + classes.btnDelete} onClick={() => dispatch(openAlert('isOpenedUser'))}>
+                  <button
+                    className={"default-btn " + classes.btnDelete}
+                    onClick={() => dispatch(openAlert("isOpenedUser"))}
+                  >
                     <img
                       src={deleteIcon}
                       alt="delete"
@@ -200,9 +219,12 @@ const NewUserPage = (props) => {
               </div>
             </div>
           </form>
+          <button onClick={() => toogleVisible()} className={classes.showBtn}>
+            <img src={visible ? eyeOpen : eyeClose} alt="#" />
+          </button>
         </section>
       </section>
-      <AlertAccept type='user' id={userId} />
+      <AlertAccept type="user" id={userId} />
     </>
   );
 };

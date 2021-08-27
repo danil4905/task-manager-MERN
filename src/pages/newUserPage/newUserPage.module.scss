@@ -20,6 +20,7 @@
   border-radius: 4px;
   padding: 40px 50px 50px 40px;
   min-height: 472px;
+  position: relative;
 }
 .wrapperProfile {
   background-color: white;
@@ -92,8 +93,8 @@
   background-color: white;
   border: none;
   cursor: pointer;
-  top: 38px;
-  left: 495px;
+  bottom: 128px;
+  right: 75px;
 }
 .btnDelete {
   color:#FF603E;

@@ -1,0 +1,72 @@
+@import '/src/variables.scss';
+
+.wrapper {
+    margin-top: 35px;
+}
+.topNav {
+    span {
+        font-size: $extra-big-size;
+        font-weight: 500;
+        line-height: 28px;
+    }
+    margin: 35px 0 25px;
+}
+.main {
+    background-color: white;
+    border: 1px solid #D8E3EC;
+    border-radius: 4px;
+    height: 430px;
+}
+.files,.setting {
+    padding: 30px;
+}
+.files {
+    border-bottom: 1px solid #D8E3EC;
+    display: flex;
+}
+.fileItem {
+    width: 181px;
+    height: 168px;
+    border: 1px solid #D8E3EC;
+    border-radius: 6px;
+    padding: 3px;
+    margin-right: 20px;
+    cursor: pointer;
+    img {
+        width: 173px;
+        height: 109px;
+        border-radius: 4px;
+    }
+}
+.fileInfo {
+    display: flex;
+    flex-direction: column;
+    font-size: $small-size;
+    margin-left: 10px;
+    span {
+        margin-top: 5px;
+    }
+    .date {
+        opacity: 0.6;
+    }
+}
+.button {
+    background-color: $color-green-photo;
+    img {
+        margin-right: 10px;
+    }
+    &:hover {
+        background-color: #51EFAC;
+    }
+    &:active {
+        background-color: #33CD8C;
+    }
+}
+.label {
+    font-weight: 500;
+    font-size: $small-size;
+}
+.input {
+    margin:10px 0 30px ;
+    width: 100%;
+}

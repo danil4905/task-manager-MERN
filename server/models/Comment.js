@@ -1,10 +1,11 @@
-const { Schema, model, ObjectId } = require("mongoose");
+const { Schema, model } = require("mongoose");
 
 
  const Comment = new Schema({
-   date: { type: Date, required: true },
-   user: { type: ObjectId, ref: "User" },
+   user: { type: Object  },
+   task:{type:String},
    message:{type:String,required:true},
+   dateCreated:{type:Date, default: Date.now}
  });
 
  module.exports = model('Comment',Comment);

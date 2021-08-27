@@ -1,0 +1,8 @@
+@import '/src/variables.scss';
+.fileItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #D8E3EC;
+    height: 50px;
+}

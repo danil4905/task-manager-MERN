@@ -7,16 +7,40 @@ export const Filter = (unFiltered, parametrs) => {
   if (typeof parametrs.dateInput === "object" && parametrs.dateInput) {
     date = parametrs.dateInput.toLocaleDateString().split("/").join(".");
   }
+  if (typeof parametrs.date === "object" && parametrs.date !== null) {
+    date = parametrs.date.toLocaleDateString().split("/").join(".");
+  }
+  if (parametrs.date === null) {
+    date = "";
+  }
   let filtered;
-  if (parametrs.select) {
-    filtered = unFiltered.filter(function (v) {
-      return (
-        (v.name.includes(parametrs.searchInput) ||
-          v.author.includes(parametrs.searchInput)) &&
-        v.date.includes(date) &&
-        v.status.includes(parametrs.select)
-      );
-    });
+  if (parametrs.select || parametrs.select === "") {
+    if (parametrs.select === "all") {
+      filtered = unFiltered.filter(function (v) {
+        return (
+          (v.name.includes(parametrs.search) ||
+            v.author.name.includes(parametrs.search)) &&
+          new Date(v.dateExpired)
+            .toLocaleDateString()
+            .split("/")
+            .join(".")
+            .includes(date)
+        );
+      });
+    } else {
+      filtered = unFiltered.filter(function (v) {
+        return (
+          (v.name.includes(parametrs.search) ||
+            v.author.name.includes(parametrs.search)) &&
+          new Date(v.dateExpired)
+            .toLocaleDateString()
+            .split("/")
+            .join(".")
+            .includes(date) &&
+          v.status.includes(parametrs.select)
+        );
+      });
+    }
   } else {
     filtered = unFiltered.filter(function (v) {
       return (

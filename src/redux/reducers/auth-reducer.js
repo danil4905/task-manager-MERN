@@ -1,7 +1,7 @@
 import { constants } from "../const/constants";
 
 const INITIAL_STATE = {
-  isLogined: false,
+  isLogined: true,
   errorMessage: "",
   user: {},
   email:'',

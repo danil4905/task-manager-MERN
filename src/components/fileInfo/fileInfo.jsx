@@ -9,6 +9,7 @@ const FileInfo = (props) => {
             <span className={classes.fileType}><FileType type={props.type}/></span>
             <span className={classes.fileName}>{props.name}</span>
             <span className={classes.fileSize}>{calculateSize(props.size)}</span>
+            {props.action?
             <button className={"default-btn " + classes.fileDelete} onClick={() => props.action(props.id)} >
                     <img
                       src={deleteIcon}
@@ -16,7 +17,7 @@ const FileInfo = (props) => {
                       className={classes.delete}
                     />
                     Удалить
-                  </button>
+                  </button>:""}
         </div>
     )
 }
